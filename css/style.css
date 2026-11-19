@@ -416,6 +416,24 @@ p {
 }
 
 
+/* Cards de Bootstrap - SPOTS */
+
+.iconicos-card.card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.iconicos-card .card-body {
+    padding: 0;
+}
+
+.iconicos-card .card-img-top {
+    border-radius: 0;
+}
+
+
 
 @media (max-width: 768px) {
     .iconicos-imagen {
@@ -783,51 +801,10 @@ html {
     border-bottom: 1px solid #ccc;
 }
 
-
-
-.food-desplegable summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 0;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    cursor: pointer;
-    list-style: none;
-}
-
-.food-desplegable summary::-webkit-details-marker {
-    display: none;
-}
-
-
-
 .food-flecha {
     color: #d00000;
     font-size: 22px;
     transition: transform 0.3s ease;
-}
-
-
-
-.food-desplegable[open] .food-flecha {
-    transform: rotate(180deg);
-}
-
-
-
-.food-desplegable ul {
-    list-style: none;
-    padding: 0 0 15px;
-    margin: 0;
-}
-
-.food-desplegable li {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    padding: 8px 0;
-    color: #333;
 }
 
 
@@ -939,7 +916,65 @@ html {
     color: #bbb;
     margin-bottom: 0;
 }
+/* ACCORDION BOOTSTRAP - FOOD & BAR */
 
+.food-desplegable.accordion {
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-width: 0;
+    --bs-accordion-btn-bg: transparent;
+    --bs-accordion-active-bg: transparent;
+    --bs-accordion-active-color: inherit;
+}
+
+
+.food-desplegable .accordion-button {
+    padding: 14px 0;
+    background: transparent;
+    color: inherit;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: none;
+    border-top: 1px solid #ccc;
+    border-radius: 0;
+    justify-content: space-between;
+}
+
+
+.food-desplegable .accordion-button:focus {
+    box-shadow: none;
+}
+
+.food-desplegable .accordion-button::after {
+    display: none;
+}
+
+.food-desplegable .accordion-body {
+    padding: 12px 0 20px;
+    background: transparent;
+}
+
+.food-desplegable .accordion-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.food-desplegable .accordion-body a {
+    color: #333;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+}
+
+.food-desplegable .accordion-body a:hover {
+    color: #d00000;
+}
+
+.food-desplegable .accordion-body li {
+    margin-bottom: 12px;
+}
 
 
 
@@ -957,7 +992,6 @@ html {
 
     display: flex;
     align-items: center;
-    padding: 0%;
 }
 
 .hero-style-contenido {
@@ -986,9 +1020,7 @@ html {
     white-space: nowrap;
     margin: 0;
     z-index: 2;
-    .hero-style {
-    position: relative;
-}
+    
 }
 
 .hero-style-contenido p {
